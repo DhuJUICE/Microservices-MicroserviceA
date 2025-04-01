@@ -1,0 +1,24 @@
+spring:
+  security:
+      user:
+        name: admin
+        password: admin
+
+  datasource:
+    url: jdbc:postgresql://ep-still-fire-a2mihcqh-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_XD9Cva6FsplR
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # Creates or updates the database schema based on entities that already exist
+      #ddl-auto: create # for first time database setup with tables
+    show-sql: true # Shows the SQL queries in the logs
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  application:
+    name: microservice
+    
+server:
+  port: 8080
