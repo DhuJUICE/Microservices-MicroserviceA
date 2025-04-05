@@ -13,6 +13,10 @@ public class FinancialService {
     @Autowired
     private FinancialRepository financialRepository;
 
+    public List<Financial> getAllFinancials() {
+        return financialRepository.findAll();
+    }
+
     public List<Financial> getFinancialsByUserId(Long userId) {
         return financialRepository.findByUserId(userId);
     }

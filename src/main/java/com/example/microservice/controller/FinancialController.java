@@ -14,6 +14,11 @@ public class FinancialController {
     @Autowired
     private FinancialService financialService;
 
+    @GetMapping
+    public List<Financial> getAllFinancials() {
+        return financialService.getAllFinancials();
+    }
+
     @GetMapping("/user/{userId}")
     public List<Financial> getFinancialsByUserId(@PathVariable Long userId) {
         return financialService.getFinancialsByUserId(userId);
