@@ -34,6 +34,11 @@ public class FinancialController {
         return financialService.updateFinancial(id, financial);
     }
 
+    @PutMapping("/user/{userId}")
+    public Financial updateFinancialByUserId(@PathVariable Long userId, @RequestBody Financial financial) {
+        return financialService.updateFinancialByUserId(userId, financial);
+    }
+
     @DeleteMapping("/{id}")
     public void deleteFinancial(@PathVariable Long id) {
         financialService.deleteFinancial(id);
