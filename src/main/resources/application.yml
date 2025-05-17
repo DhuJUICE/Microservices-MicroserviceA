@@ -5,9 +5,9 @@ spring:
         password: admin
 
   datasource:
-    url: jdbc:postgresql://ep-still-fire-a2mihcqh-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require
-    username: neondb_owner
-    password: npg_XD9Cva6FsplR
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
